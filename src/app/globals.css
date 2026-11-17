@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #07090f;
+  color: #f4f6fb;
+}
+
+/* Premium subtle custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(154, 164, 191, 0.18);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 140, 255, 0.42);
+}
+
+/* Precision Observatory Glass Card */
+.galaxy-glass {
+  background: rgba(13, 18, 32, 0.76);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.galaxy-glass-strong {
+  background: rgba(10, 14, 26, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sleek Tech Slider */
+input[type="range"].cosmic-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"].cosmic-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #f4f6fb;
+  border: 2px solid #7c8cff;
+  box-shadow: 0 0 12px rgba(124, 140, 255, 0.75);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"].cosmic-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  box-shadow: 0 0 18px rgba(124, 140, 255, 0.95);
+}
+
+input[type="range"].cosmic-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #f4f6fb;
+  border: 2px solid #7c8cff;
+  box-shadow: 0 0 12px rgba(124, 140, 255, 0.75);
+}
+
+/* Subtle Audio Equalizer Animation */
+@keyframes eqPulse {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.eq-bar-1 {
+  animation: eqPulse 0.9s ease-in-out infinite;
+}
+.eq-bar-2 {
+  animation: eqPulse 0.65s ease-in-out 0.15s infinite;
+}
+.eq-bar-3 {
+  animation: eqPulse 1.05s ease-in-out 0.3s infinite;
+}
+
+/* Neural Scanline during Image Generation */
+@keyframes cosmicScan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(220%);
+  }
+}
+
+.cosmic-scanline {
+  animation: cosmicScan 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Tabular numbers utility */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
